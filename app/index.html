@@ -6,16 +6,17 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
+  <title>VigLink Angular Seed App</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 	
   <link rel="stylesheet" href="../bower_components/html5-boilerplate/css/normalize.css">
   <link rel="stylesheet" href="../bower_components/html5-boilerplate/css/main.css">
-  
-	<link rel="stylesheet" href="build/bundle.css">
-  
-	<script src="../bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+
+  <!-- Our custom css, compiled from sass -->
+	<link rel="stylesheet" href="build/app.css">
+
+  <script src="../bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
 
@@ -28,17 +29,29 @@
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
+
+  <!-- Library Files for angular, etc. -->
   <script src="../bower_components/angular/angular.js"></script>
   <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 	<script src="lib/angular-ui-bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
+
+  <!-- General JS libraries -->
+  <script src="../bower_components/lodash/lodash.js"></script>
+
+  <!-- General app-specific JS files -->
   <script src="app.js"></script>
-		
 	<script src='config/settings.js'></script>
-  
+
+  <!-- Directives -->
+
+  <!-- Filters -->
+
+  <!-- Module specific JS goes here -->
 	<script src="modules/feature1/feature1_controller.js"></script>
   <script src="modules/feature2/feature2_controller.js"></script>
   <script src="modules/main/nav_controller.js"></script>
-		
+
+  <!-- JS that should be loaded last -->
 	<script src="config/routes.js"></script>
 </body>
 </html>
