@@ -41,6 +41,7 @@ app/                    --> all of the source files for the application
 	stylesheets/					--> All app styling should go here
 		include/						--> All third party sass and css goes here.
 		modules/						--> Module specific sass goes here.
+		app.scss            --> if you add sass into include or modules, make sure to @import it here
   app.js                --> main application module; all dependency modules listed here
   index.html            --> app layout file (the main html template file of the app)
   index-async.html      --> just like index.html, but loads js files asynchronously
@@ -127,3 +128,12 @@ The value of 'heading' sets the accordion box text, the value of ui-sref is the 
 
 ####6. Add your JS files to index.html
 All newly created JS files need to be loaded through index.html.
+
+## The Sass Pipeline
+
+Using `gulp sass` (or `gulp watch` to continually monitor for changes), will trigger the compilation of app/stylesheets/app.scss into app/build/app.css.
+
+* build/app.css is the only custom stylesheet that should be included in index.html
+* stylesheets/app.scss is the only Sass file that should be compiled by gulp.
+* All new stylesheets should be added into stylesheets/include (third party stylesheets) or stylesheets/modules (our stylesheets)
+* To include added stylesheets add `@import "relative/path/name"` to app.scss
