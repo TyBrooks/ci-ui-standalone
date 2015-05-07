@@ -1,4 +1,4 @@
-adminApp.config(['$provide', function($provide) {
+tailoredKeywords.config(['$provide', function($provide) {
   $provide.service('settings', function() {
     this.apiURL = 'https://admin.viglink.com/'
   })

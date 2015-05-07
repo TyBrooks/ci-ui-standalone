@@ -1,4 +1,4 @@
-angular.module('adminApp')
+angular.module('tailoredKeywords')
 
 .config(['$stateProvider', '$urlRouterProvider', '$provide', function($stateProvider, $urlRouterProvider, $provide) {
   $provide.service('authService', [ '$http', 'settings', function( $http, settings ) {
@@ -16,41 +16,10 @@ angular.module('adminApp')
   $stateProvider
   
     .state('nav', {
-      resolve: {
-        auth: function(authService) {
-          return authService.sendAuthRequest()
-            .then(
-              function(data) {
-                return { data: data, success: true};
-              },
-              function() {
-                return { success: false };
-              }
-            )
-        }
-      },
       url: "",
-      abstract: true,
-      templateUrl: 'modules/main/nav.html',
-      controller: 'NavCtrl'
+      templateUrl: 'modules/ui/ui.html',
+      controller: 'UiCtrl'
     })
-    
-    .state('nav.welcome', {
-      url: "/welcome",
-      templateUrl: "modules/main/nav.welcome.html",
-      controller: "NavCtrl"
-    })
-  
-    .state('nav.feature1', {
-      url: "/feature1",
-      templateUrl: 'modules/feature1/feature1.html',
-      controller: 'Feature1Ctrl'
-    })
-    
-    .state('nav.feature2', {
-      url: "/feature2",
-      templateUrl: 'modules/feature2/feature2.html',
-      controller: 'Feature2Ctrl'
-    })
+
     
 }])

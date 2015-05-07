@@ -1,10 +1,8 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-window.adminApp = angular.module('adminApp', [
+window.tailoredKeywords = angular.module('tailoredKeywords', [
   'ui.router',
   'ui.bootstrap',
-  'adminApp.feature1',
-  'adminApp.feature2',
-  'adminApp.nav'
+  'tailoredKeywords.ui'
 ]);

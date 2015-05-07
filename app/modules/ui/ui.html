@@ -1,0 +1,45 @@
+<h1 class='text-center'>Tailored Keywords</h1>
+
+
+<section id="tk-campaign-choose">
+  <h3>Select Campaign</h3>
+  <select id="tk-campaign-select">
+    <option>Campaign One</option>
+  </select>
+</section>
+
+<section id="tk-add">
+  <h3>Add Term</h3>
+
+  <!--<label for="tk-phrase">Phrase</label>-->
+  <div class="tk-input">
+    <input id="tk-phrase" type="text" required="true" ng-maxlength="80" placeholder="Keyword/Phrase"/>
+    <div class="tk-info">
+      <p>Keywords & Phrases are case sensitive</p>
+    </div>
+  </div>
+
+  <!--<label for="tk-url">Url</label>-->
+  <div class="tk-input">
+    <input id="tk-url" type="text" required="true" placeholder="URL Destination"/>
+    <div class="tk-info">
+      <p>Leave blank to allow VigLink to choose destination</p>
+      <p>Must be valid URL</p>
+    </div>
+  </div>
+
+  <div class="tk-input">
+    <input id="tk-country" type="text" required="true" placeholder="Country" />
+    <div class="tk-info">
+      <p>Any, US, UK, IT, DE. Leave blank for any.</p>
+    </div>
+  </div>
+  <!--<label for="tk-country">Country</label>-->
+  <!--<select id="tk-country">-->
+    <!--<option>All Countries</option>-->
+    <!--<option>US</option>-->
+  <!--</select>-->
+
+  <button>Submit</button>
+
+</section>

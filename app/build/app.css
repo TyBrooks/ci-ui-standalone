@@ -4887,6 +4887,21 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+#tk-add {
+  margin-top: 20px; }
+  #tk-add .tk-input {
+    vertical-align: top;
+    display: inline-block;
+    margin-right: 20px; }
+    #tk-add .tk-input input {
+      width: 100%; }
+    #tk-add .tk-input .tk-info {
+      margin-top: 10px; }
+      #tk-add .tk-input .tk-info p {
+        font-size: 12px;
+        line-height: 14px;
+        margin-bottom: 0; }
+
 /* app css stylesheet */
 .menu {
   list-style: none;
