@@ -1,5 +1,5 @@
 tailoredKeywords.config(['$provide', function($provide) {
   $provide.service('settings', function() {
-    this.apiURL = 'https://admin.viglink.com/'
+    this.apiURL = 'https://www.viglink.com/'
   })
 } ] );

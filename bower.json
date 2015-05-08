@@ -13,6 +13,7 @@
     "angular-ui-router": "~0.2.13"
   },
   "devDependencies": {
-    "lodash": "~3.8.0"
+    "lodash": "~3.8.0",
+    "jquery": "1.11.3"
   }
 }

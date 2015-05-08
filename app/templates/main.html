@@ -3,17 +3,18 @@
 
 <section id="tk-campaign-choose">
   <h3>Select Campaign</h3>
-  <select id="tk-campaign-select">
-    <option>Campaign One</option>
+  <select id="tk-campaign-select" ng-model="user_id">
+    <option ng-repeat="campaign in campaigns" value="campaign.id">{{ campaign.name }}</option>
   </select>
 </section>
 
-<section id="tk-add">
+<section id="tk-add" ng-controller="AddCtrl">
   <h3>Add Term</h3>
 
   <!--<label for="tk-phrase">Phrase</label>-->
   <div class="tk-input">
-    <input id="tk-phrase" type="text" required="true" ng-maxlength="80" placeholder="Keyword/Phrase"/>
+    <input id="tk-phrase" type="text" required="true" ng-maxlength="80"
+           ng-model="term.phrase" placeholder="Keyword/Phrase"/>
     <div class="tk-info">
       <p>Keywords & Phrases are case sensitive</p>
     </div>
@@ -21,7 +22,8 @@
 
   <!--<label for="tk-url">Url</label>-->
   <div class="tk-input">
-    <input id="tk-url" type="text" required="true" placeholder="URL Destination"/>
+    <input id="tk-url" type="text" required="true"
+           ng-model="term.url" placeholder="URL Destination"/>
     <div class="tk-info">
       <p>Leave blank to allow VigLink to choose destination</p>
       <p>Must be valid URL</p>
@@ -29,7 +31,8 @@
   </div>
 
   <div class="tk-input">
-    <input id="tk-country" type="text" required="true" placeholder="Country" />
+    <input id="tk-country" type="text" required="true"
+           ng-model="term.country" placeholder="Country" />
     <div class="tk-info">
       <p>Any, US, UK, IT, DE. Leave blank for any.</p>
     </div>
@@ -40,6 +43,6 @@
     <!--<option>US</option>-->
   <!--</select>-->
 
-  <button>Submit</button>
+  <button id="tk-submit" ng-click="makeAddRequest()">Submit</button>
 
 </section>
