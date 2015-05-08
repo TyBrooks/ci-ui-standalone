@@ -6,7 +6,7 @@ angular.module( 'tailoredKeywords' )
   $scope.term = {};
 
   $scope.makeAddRequest = function() {
-    var promise = api.add( $scope.term, $scope.$parent.campaign );
+    var promise = api.add( $scope.term, $scope.$parent.userId );
     console.log(promise);
   }
 } ] );

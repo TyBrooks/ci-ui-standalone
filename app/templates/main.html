@@ -3,8 +3,7 @@
 
 <section id="tk-campaign-choose">
   <h3>Select Campaign</h3>
-  <select id="tk-campaign-select" ng-model="user_id">
-    <option ng-repeat="campaign in campaigns" value="campaign.id">{{ campaign.name }}</option>
+  <select id="tk-campaign-select" ng-options="campaign.id as campaign.name for campaign in campaigns" ng-model="userId">
   </select>
 </section>
 
